@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="container" id="myContainer">
+  <div class="my-work">
+    <h2>my test content1</h2>
+  </div>
+  <div class="my-work">
+    <h2>my test content2</h2>
+  </div>
+  <div class="my-work">
+    <h2>my test content3</h2>
+  </div>
+  <div class="my-work">
+    <h2>my test content4</h2>
+  </div>
+ </div>
+<script>
+const myWork = document.querySelectorAll(".my-work");
+console.log(myWork.length);
+
+ for (const x of myWork.values()) {
+   console.log('x is: ', x);
+   x.style.backgroundColor = "rgb(" + Math.random()*250 + "," + Math.random()*250 + "," + Math.random()*250 + ")";
+ };
+</script>
+
+</body>
+</html>

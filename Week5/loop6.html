@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="container" id="myContainer">
+  <div class="my-work">
+    <h2>my test content1</h2>
+  </div>
+  <div class="my-work">
+    <h2>my test content2</h2>
+  </div>
+  <div class="my-work">
+    <h2>my test content3</h2>
+  </div>
+  <div class="my-work">
+    <h2>my test content4</h2>
+  </div>
+ </div>
+<script>
+const myWork = document.querySelectorAll(".my-work");
+console.log(myWork.length);
+var i;
+for (i = 0; i < myWork.length; i++) {
+  myWork[i].style.backgroundColor = "rgb(" + 250 + "," + i*50 + "," + i*50 + ")";
+} 
+</script>
+</body>
+</html>

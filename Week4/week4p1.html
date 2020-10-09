@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function myFunction() {
+            let myVar1 = "hello";
+
+            let myVar2 = "world";
+
+            let myVar3 ="javascript";
+
+            myVar3 = myVar2;
+            myVar2 = myVar1;
+                document.getElementById("comment1").innerHTML = myVar1; //output statement to html
+                document.getElementById("comment2").innerHTML = myVar2; //output statement to html
+                document.getElementById("comment3").innerHTML = myVar3;
+        }
+    </script>
+    <script>
+        function myFunction2() {
+            myObj1 = {team: 'Bears'}
+
+            myObj2 ={team: 'Packers'}
+
+            myObj3={team: 'Cowboys'}
+
+            myObj3 = myObj2
+
+            myObj2 = myObj1
+
+                document.getElementById("comments1").innerHTML = myObj1.team; //output statement to html
+                document.getElementById("comments2").innerHTML = myObj2.team; //output statement to html
+                document.getElementById("comments3").innerHTML = myObj3.team;
+        }
+    </script>
+    <title>Week4</title>
+</head>
+<body>
+    <h1>Week 4.1 Exercise</h1>
+    <p id="comment1">First Variable:</p>
+    <p id="comment2">Second Variable:</p>
+    <p id="comment3">Third Variable:</p>
+    <button type="button" onclick="myFunction()">Run it</button>
+    <h1>Week 4.1 Exercise 2</h1>
+    <p id="comments1">First Variable:</p>
+    <p id="comments2">Second Variable:</p>
+    <p id="comments3">Third Variable:</p>
+    <button type="button" onclick="myFunction2()">Run it</button>
+</body>
+</html>
