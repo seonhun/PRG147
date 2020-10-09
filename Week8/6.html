@@ -1,0 +1,73 @@
+<!-- 6. Object collection access
+
+This example finds the form element with id="frm1", in the forms collection, and displays all element values.
+
+Add 2 more elements (input type text) to the form: DOB and middle name. Display the all form elements. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+ 
+
+<h2>Finding HTML Elements Using document.forms</h2>
+
+ 
+
+<form id="frm1" action="/action_page.php">
+
+  First name: <input type="text" name="fname" value="Donald"><br>
+
+  Middle name: <input type="text" name="mname" value="Delicious"><br>
+
+  Last name: <input type="text" name="lname" value="Duck"><br><br>
+
+  DOB: <input type="date" name="tdate" value="2020-10-07" min="1900-01-01" max="2020-12-31"><br>
+
+  <input type="submit" value="Submit">
+
+</form>
+
+ 
+
+<p>Click "Try it" to display the value of each element in the form.</p>
+
+ 
+
+<button onclick="myFunction()">Try it</button>
+
+ 
+
+<p id="demo"></p>
+
+ 
+
+<script>
+
+function myFunction() {
+
+  var x = document.forms["frm1"];
+
+  var text = "";
+
+  var i;
+
+  for (i = 0; i < x.length ;i++) {
+
+    text += x.elements[i].value + "<br>";
+
+  }
+
+  document.getElementById("demo").innerHTML = text;
+
+}
+
+</script>
+
+ 
+
+</body>
+
+</html>

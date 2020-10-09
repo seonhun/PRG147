@@ -1,0 +1,37 @@
+<!-- 4. Finding elements by class name
+
+Modify the code below by adding 2 other DOM  elements labeled by class names (html tags) and displaying their content -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Finding HTML Elements by Class Name</h2>
+
+<p>Hello World!</p>
+
+<p class="intro">The DOM is very useful.</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+<p id="demo"></p>
+
+<p class="tag1"></p>
+
+<p class="tag2"></p>
+
+ 
+
+<script>
+var x = document.getElementsByClassName("intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+
+document.getElementByClassName ("tag1").innerHTML = 
+'The second paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+
+document.getElementByClassName ("tag2").innerHTML = 
+'The third paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+</script>
+
+</body>
+</html>

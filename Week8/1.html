@@ -1,0 +1,32 @@
+<!-- 1. This example finds the element with id="intro".
+
+Modify the code below by adding 2 other DOM elements identified by id = ....  and apply a change of your choice in JS -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Finding HTML Elements by Id</h2>
+
+<p id="intro">Hello World!</p>
+<p id="self">This example demonstrates the <b>getElementsById</b> method.</p>
+<p id="demo"></p>
+<p id="tag1">Another tag</p>
+<p id="tag2">Another tag</p>
+
+<script>
+    var myElement = document.getElementById("intro");
+    
+    function myFunction() {
+        document.getElementById("intro").innerHTML = "changed";
+        document.getElementById("tag1").innerHTML = "Another change";
+        document.getElementById("tag2").innerHTML = "More changes";
+        document.getElementById("demo").innerHTML = "The text from the intro paragraph is " + myElement.innerHTML;
+        // document.querySelector("intro"); //first instance
+        // document.querySelectorAll("intro");
+    }
+    </script>
+<button type="button" onclick="myFunction()">Click me.</button>
+
+</body>
+</html>

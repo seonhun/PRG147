@@ -1,0 +1,31 @@
+<!-- 8.  Adding new element to the front of the list
+
+Add two more elements to the DIV region.
+
+  -->
+
+  <!DOCTYPE html>
+  <html>
+  <body>
+  
+  <div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+  
+  <p id="p3">This is the third paragraph.</p>
+  
+  <p id="p4">This is the fourth paragraph.</p>
+  </div>
+  
+  <script>
+  var para = document.createElement("p");
+  var node = document.createTextNode("This is new."); //I added elements inside the DIV region but I do not see the purpose of doing so when you already have two elements inside the div.
+  para.appendChild(node);
+  
+  var element = document.getElementById("div1");
+  var child = document.getElementById("p1");
+  element.insertBefore(para,child);
+  </script>
+  
+  </body>
+  </html>

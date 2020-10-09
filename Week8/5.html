@@ -1,0 +1,43 @@
+<!-- 5. Finding DOM elements with query CSS selectors
+
+<p class="intro">
+
+...
+
+var x = document.querySelectorAll("p.intro");
+
+Modify the code below by adding 2 other DOM  elements labeled a shown and access those through CSS selectors -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Finding HTML Elements by Query Selector</h2>
+
+<p>Hello World!</p>
+
+<p class="intro">The DOM is very useful.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+<p id="demo"></p>
+
+<p class="tag1"></p>
+
+<p id="tag2"></p>
+
+ 
+
+<script>
+var x = document.querySelectorAll("p.intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+
+document.getElementByClassName("tag1").innerHTML = 
+'The second paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+
+document.getElementById("tag2").innerHTML = 
+'The third paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+</script>
+
+</body>
+</html>

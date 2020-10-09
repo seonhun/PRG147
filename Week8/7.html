@@ -1,0 +1,75 @@
+<!-- 7.  Adding DOM elements
+
+Add two more elements to the DIV region. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<div id="div1">
+
+<p id="p1">This is a paragraph.</p>
+
+<p id="p2">This is another paragraph.</p>
+
+<p id="p3">This is another paragraph.</p>
+
+<p id="p4">This is another paragraph.</p>
+
+</div>
+
+<div id="div2">
+
+<p id="p5">This is a paragraph.</p>
+
+<p id="p6">This is another paragraph.</p>
+
+<p id="p7">This is another paragraph.</p>
+
+<p id="p8">This is another paragraph.</p>
+
+</div>
+
+ 
+
+<div id="div3">
+
+<p id="p9">This is a paragraph.</p>
+
+<p id="p10">This is another paragraph.</p>
+
+<p id="p11">This is another paragraph.</p>
+
+<p id="p12">This is another paragraph.</p>
+
+</div>
+
+ 
+
+<script>
+
+var para = document.createElement("p");
+
+var node = document.createTextNode("This is new."); //I do not know what you are trying to do with this function. Please be more clear on what you want us to add (ie, add DOM elements within the div#div1 or outside of it.) Also, if the code is supposed to display an appended statement to "This is new.", this current code does not work so please make sure the code works before posting it for us to use. Right now, I am not sure if this code is working as intended or not since you did not specify what kind of result we should be looking for.
+
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+
+element.appendChild(para);
+
+var element = document.getElementById("div2");
+
+element.appendChild(para);
+
+var element = document.getElementById("div3");
+
+element.appendChild(para);
+
+</script>
+
+</body>
+
+</html>

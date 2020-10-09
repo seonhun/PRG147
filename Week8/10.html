@@ -1,0 +1,51 @@
+<!-- 10.  Removing nested DOM elements
+
+Setup the example below so that you can remove at least two nested tags inside the DIV region. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+ 
+
+<div id="div1">
+
+<p id="p1">This is a paragraph.</p>
+
+<p id="p2">This is another paragraph.</p>
+
+<p id="p3">This is the third paragraph.</p>
+
+<p id="p4">This is the fourth paragraph.</p>
+
+<p id="p5">This is the fifth paragraph.</p>
+
+</div>
+
+ 
+
+<script>
+
+var parent = document.getElementById("div1");
+
+var child = document.getElementById("p1");
+
+var child2 = document.getElementById("p3");
+
+var child3 = document.getElementById("p4");
+
+parent.removeChild(child);
+
+parent.removeChild(child2);
+
+parent.removeChild(child3);
+
+</script>
+
+ 
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!-- 3. Referencing nested tags
+
+<div id="main">
+
+<p>The DOM is very useful.</p>
+
+...
+
+</div>
+
+Modify the code below by adding 2 other DOM  elements nested inside the DIVs  and displaying their content -->
+
+ 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Finding HTML Elements by Tag Name</h2>
+
+<p id="demo"></p>
+
+ 
+
+<div id="main">
+<p>The DOM is very useful.</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+
+<p id="tag1"></p>
+
+
+</div>
+
+<div id="aside">
+<p>The DOM is very useful.</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+
+<p id="tag2"></p>
+
+
+</div>
+
+ 
+
+<script>
+var x = document.getElementById("main");
+var y = x.getElementsByTagName("p");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+document.getElementById("tag1").innerHTML = 
+'The second paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+document.getElementById("tag2").innerHTML = 
+'The third paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+</script></body></html>

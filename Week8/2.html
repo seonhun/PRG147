@@ -1,0 +1,53 @@
+<!-- 2. Finding DOM elements by TAG name
+
+Modify the code below by adding 2 other DOM elements (html tags) and displaying their content -->
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+ 
+
+<h2>Finding HTML Elements by Tag Name</h2>
+
+ 
+
+<p>Hello World!</p>
+
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+
+ 
+
+<p id="demo"></p>
+
+ 
+
+<p id="tag1"></p>
+
+<p id="tag2"></p>
+
+<script>
+
+var x = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML =
+
+'The text in first paragraph (index 0) is: ' + x[0].innerHTML;
+
+document.getElementById("tag1").innerHTML =
+
+'The text in second paragraph (index 0) is: ' + x[0].innerHTML;
+
+document.getElementById("tag2").innerHTML =
+
+'The text in third paragraph (index 0) is: ' + x[0].innerHTML; //I do not get what the difference is between your instructions for assignment #1 and assignment #2
+
+</script>
+
+ 
+
+</body>
+
+</html>
