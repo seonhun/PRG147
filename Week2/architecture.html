@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Javascript Architecture Placement-->
+    <head>
+            <meta charset="UTF-8">
+            <title>Document</title>
+            <!--<script>
+                function myFunction2() {
+                    document.getElementById("demo2").innerHTML = "Another Paragraph changed.";
+                }
+            </script>
+        -->
+    </head>
+    <body>
+        <h1>A Web Page</h1>
+        <!--inline html code; a tag captures the clickable event-->
+        <p><a href="#" onClick="alert('Hello');">Click Me</a></p>
+        <!--in body JS; clickable-->
+        <p id="demo1">A Paragraph</p>
+        <button type="button" onclick="myFunction1()">Try it</button>
+        <script>
+            function myFunction1() {
+                document.getElementById("demo1").innerHTML = "Paragraph changed.";
+            }
+        </script>
+        <!--in head JS; script tag at head of document-->
+        <p id="demo2">Another Paragraph</p>
+        <button type="button" onclick="myFunction2()">Try this as well</button>
+        <!--external file JS; preferred way-->
+        <p id="demo">More Paragraphs</p>
+        <button type="button" onclick="myFunction()">Try this, too</button>
+        <p>(myFunction3() stored in external file "myScript.js")</p>
+        <script src="myScript.js"></script>
+    </body>
+</html>
