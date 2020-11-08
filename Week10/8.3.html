@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Page Title</title></head>
+<body>
+<div></div>
+</body>
+<div id="elem" type="button">Click Me</div>
+<script>
+  elem.onclick = function() {
+    alert('Thank you');
+    todayDate = Date();
+    var node = document.createElement("p");
+    var textnode = document.createTextNode("Today's date is: "+ todayDate + ".");
+    node.appendChild(textnode);
+    document.getElementById("elem").appendChild(node);
+  };
+</script>
+
+</html>

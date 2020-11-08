@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body id="para">
+<div>Click anywhere</div>
+<script>
+  
+document.addEventListener("click", function(){
+  document.querySelectorAll("p").forEach(el =>el.remove());
+    var coordNode = document.createElement("p");
+    var coordText = document.createTextNode("Coordinates: " + event.clientX + ":" + event.clientY);
+    coordNode.appendChild(coordText);
+    document.getElementById("para").appendChild(coordNode);
+});
+</script>
+</body>
+</html> 

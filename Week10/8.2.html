@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+
+function countRabbits(thisrabb) {
+    var countRabbit = Math.floor(Math.random()*10);
+    thisrabb.innerHTML = "Number of rabbits = " + countRabbit + "."
+    document.querySelectorAll("img").forEach(el =>el.remove());
+    
+    for (let i = 0; i < countRabbit; i++) {
+        addClicker();
+    }
+}
+function sync(dom, pos) {
+  dom.style.left = `${pos.x}px`;
+  dom.style.top = `${pos.y}px`;
+}
+
+function addClicker() {
+  const pos = {
+    x: Math.random() * 500,
+    y: Math.random() * 300
+  };
+  const img = new Image();
+  img.src = "rabbit.jpg";
+  img.style.position = "absolute";
+  document.querySelector("#board").appendChild(img);
+  sync(img, pos);
+}
+
+</script>
+
+</head>
+<body>
+
+<a href="#" onclick="countRabbits(this)" value="Count rabbits!">Number of rabbits.</a>
+<div id="board">
+    <span id="remain"></span>
+  </div>
+</body>
+</html> 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body id="para">
+<input type="button" value="Click me" id="elem">
+<script>
+  elem.onclick = function(event) {
+    // show event type, element and coordinates of the click
+    document.querySelectorAll("p").forEach(el =>el.remove());
+    var eventNode = document.createElement("p");
+    var eventText = document.createTextNode(event.type + " at " + event.currentTarget);
+    var coordNode = document.createElement("p");
+    var coordText = document.createTextNode("Coordinates: " + event.clientX + ":" + event.clientY);
+    eventNode.appendChild(eventText);
+    coordNode.appendChild(coordText);
+    document.getElementById("para").appendChild(eventNode);
+    document.getElementById("para").appendChild(coordNode);
+  };
+</script>
+</body>
+</html> 

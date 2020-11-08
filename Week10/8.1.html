@@ -1,0 +1,14 @@
+<!doctype html>
+<body id="para">
+<input value="Click me" onclick="clickingbutton()" type="button">
+</body>
+<script>
+function clickingbutton(id) {
+var node = document.createElement("p");
+var textnode = document.createTextNode("Hello World");
+node.appendChild(textnode);
+document.getElementById("para").appendChild(node);
+alert('Click!');
+}
+</script>
+</html>
