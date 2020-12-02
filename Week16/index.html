@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animations</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="../jquery-3.0.0.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#show").click(function() {
+                $("#theDiv").show("normal");
+            });
+            $("#hide").click(function() {
+                $("#theDiv").hide(3000, "linear"); //linear instead of swing
+            });
+            $("#toggle").click(function() {
+                $("#theDiv").toggle("slow");
+            });
+            $("#fadein").click(function() {
+                $("#theDiv").fadeIn("normal");
+            });
+            $("#fadeout").click(function() {
+                $("#theDiv").fadeOut("slow");
+            });
+            $("#fadeto5").click(function() {
+                $("#theDiv").fadeTo("slow", 0.5);
+            });
+            $("#fadeup").click(function() {
+                $("#theDiv").fadeTo("slow", 1.0);
+            });
+            $("#pulse").click(function() {
+                $("#theDiv").fadeTo("slow", 0.1)
+                            .fadeTo("fast", 0.8)
+                            .fadeTo("slow", 0.3)
+                            .fadeTo("fast", 1.0);
+            });
+            $("#slideup").click(function() { 
+                $("#theDiv").slideUp(5000);
+            });
+            $("#slidedown").click(function() {
+                $("#theDiv").slideDown(2000);
+            });
+            $("#toggle2").click(function() {
+                $("#theDiv").slideToggle("slow");
+            });
+            $("#left").click(function() {
+                $("#theDiv").animate({ width: "10%" }, 1000); //grow right
+            });
+            $("#move").click(function() {
+                $("#theDiv").animate({ left: "-=500" }, 1000, "swing");
+            });
+            $("#all").click(function() {
+                $("#theDiv").animate({ left: "+=500", width: "50%" }, 1000, "linear"); //animate at same time; can also do +=500px to add on top of it
+            });
+        });
+        
+    </script>
+    <style type="text/css">
+        #theDiv {
+            position: relative;
+            width: 350px;
+            height: 100%;
+            margin: 10px;
+            padding: 20px;
+            background: #b3c8d0;
+            border: 1px solid black;
+            font-size: 1em;
+            cursor: pointer;
+            left: 100px;
+        }
+
+        p,
+        span {
+            font-size: 16pt;
+        }
+        
+        button {
+            margin: 5pt 5pt 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Using Animations</h1>
+    <div id="content">
+        <div id="theDiv" class="box"><p>Succulents</p>
+        <img src="../images/succulents.jpg" alt="Succulents" class="box"></div>
+        <button id="show">Show</button>
+        <button id="hide">Hide</button>
+        <button id="toggle">Toggle Show/Hide</button>
+        <button id="fadein">Fade In</button>
+        <button id="fadeout">Fade Out</button>
+        <button id="fadeto5">Fade To 50%</button>
+        <button id="fadeup">Fade To 100%</button>
+        <button id="pulse">Pulsate</button>
+        <button id="slideup">Slide Up</button>
+        <button id="slidedown">Slide Down</button>
+        <button id="toggle2">Toggle Slide</button>
+        <button id="left">Shrink Left</button>
+        <button id="move">Move Element</button>
+        <button id="all">Move Right and Grow Right</button>
+    </div>
+</body>
+
+</html>
