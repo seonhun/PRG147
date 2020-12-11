@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mole Clicker Game</title>
+  <script type="text/javascript" src="src/jquery-3.0.0.js"></script>
+  <link rel="stylesheet" href="res/main.css">
+  <script type="text/javascript">
+    $('document').ready(function() {
+        $("#toggle").click(function() {
+            $("#remain").slideToggle("slow");
+        });
+      });
+  </script>
+</head>
+
+<body>
+  <div id="board">
+    <!-- <span id="remain"></span> -->
+  </div>
+  <table>
+    <tr>
+      <td>Timer: </td>
+      <td id="timer">0</td>
+      <td>seconds</td>
+    </tr>
+    <tr>
+      <td>Clicks: </td>
+      <td id="clicks">0</td>
+    </tr>
+    <tr>
+      <td>Moles Remaining: </td>
+      <td id="remain">0</td>
+    </tr>
+    <tr>
+      <td>Score: </td>
+      <td id="score">0</td>
+    </tr>
+    <tr>
+      <td>Weighted Score: </td>
+      <td id="timeScore">0</td>
+    </tr>
+    
+  </table>
+  <p>Mole Clicker Game</p>
+  <div>
+    <button id="start">Start</button>
+    <button id="toggle">Toggle Slide</button>
+  </div>
+  <script src="src/main.js"></script>
+</body>
+</html>
